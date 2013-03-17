@@ -148,16 +148,6 @@ extern NSString *const GHMockNSURLConnectionException;
 - (void)receiveFromPath:(NSString *)path statusCode:(NSInteger)statusCode MIMEType:(NSString *)MIMEType afterDelay:(NSTimeInterval)afterDelay;
 
 /*!
- Sends mock response, sends data, and then calls finish.
- (For asynchronous requests)
- @param data Data to load. File should be available in Test target (bundle)
- @param statusCode Status code for response
- @param MIMEType Content type for response header
- @param afterDelay Delay before responding (if < 0, there is no delay)
- */ 
-- (void)receiveData:(NSData *)data statusCode:(NSInteger)statusCode MIMEType:(NSString *)MIMEType afterDelay:(NSTimeInterval)afterDelay;
-
-/*!
  Calls connection:didFailWithError: on delegate after specified delay.
  @param error The error to pass to the delegate.
  @param afterDelay Delay before responding (if < 0, there is no delay)
